@@ -1,0 +1,31 @@
+.about {
+  padding: 60px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-deco {
+  position: absolute;
+  font-size: 80px;
+  opacity: 0.08;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.about-deco-left { left: 40px; }
+.about-deco-right { right: 40px; transform: translateY(-50%) scaleX(-1); }
+
+.about-title {
+  font-size: 36px;
+  line-height: 1.25;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.about-desc {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.9;
+}

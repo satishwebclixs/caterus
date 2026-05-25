@@ -1,0 +1,114 @@
+.inquiry-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.inquiry-header {
+  background: linear-gradient(135deg, #0d9488, #14b8a6);
+  padding: 14px 20px;
+  text-align: center;
+}
+
+.inquiry-header h3 {
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.inquiry-form {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inq-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inq-icon {
+  position: absolute;
+  left: 12px;
+  color: #0d9488;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.inq-field input,
+.inq-field select {
+  width: 100%;
+  padding: 10px 12px 10px 36px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #374151;
+  font-family: 'Inter', sans-serif;
+  background: #fafafa;
+  transition: border-color 0.2s;
+  outline: none;
+  appearance: none;
+}
+
+.inq-field input:focus,
+.inq-field select:focus {
+  border-color: #0d9488;
+  background: #fff;
+}
+
+.inq-field input::placeholder { color: #9ca3af; }
+
+.select-wrap { position: relative; }
+.select-arrow {
+  position: absolute;
+  right: 12px;
+  color: #9ca3af;
+  pointer-events: none;
+  font-size: 14px;
+}
+
+.inq-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 12px;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+}
+.inq-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.inquiry-success {
+  padding: 24px 20px;
+  text-align: center;
+}
+.success-icon {
+  width: 48px;
+  height: 48px;
+  background: #0d9488;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin: 0 auto 12px;
+}
+.inquiry-success p {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.inq-error {
+  font-size: 12px;
+  color: #dc2626;
+  text-align: center;
+}
