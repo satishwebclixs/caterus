@@ -45,11 +45,11 @@ export default function Footer() {
             </li>
             <li>
               <FiPhone />
-              <a href="tel:+919876543210">+91 98765 43210</a>
+              <a href="tel:+919311729700">+91 93117 29700</a>
             </li>
             <li>
               <FiMail />
-              <a href="mailto:hello@caterus.in">hello@caterus.in</a>
+              <a href="mailto:Caterus@honeyanddough.in">Caterus@honeyanddough.in</a>
             </li>
           </ul>
         </div>

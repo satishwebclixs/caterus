@@ -12,11 +12,11 @@ export default function CtaBanner() {
         </p>
         <div className="cta-btns">
           <button className="btn-primary">Get Free Quote</button>
-          <a href="https://wa.me/919876543210" className="btn-whatsapp">
+          <a href="https://wa.me/919311729700" className="btn-whatsapp">
             <FiMessageCircle />
             WhatsApp Now
           </a>
-          <a href="tel:+919876543210" className="btn-call-white">
+          <a href="tel:+919311729700" className="btn-call-white">
             <FiPhone />
             Call Our Team
           </a>

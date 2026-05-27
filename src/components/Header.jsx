@@ -27,7 +27,7 @@ export default function Header() {
         </nav>
 
         <div className="header-actions">
-          <a href="tel:+919876543210" className="btn-call">
+          <a href="tel:+919311729700" className="btn-call">
             <FiPhone size={15} />
             Call Now
           </a>

@@ -140,6 +140,13 @@
   padding: 12px 10px;
   box-shadow: 0 2px 14px rgba(0,0,0,0.12);
   backdrop-filter: blur(8px);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.qr-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 /* Top: title */

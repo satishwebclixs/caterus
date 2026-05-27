@@ -1,6 +1,9 @@
 import QuickInquiry from './QuickInquiry'
 import './Hero.css'
 
+const MENU_LINK = 'https://drive.google.com/drive/folders/1B16fSR8fSrhfgIk0HWGlFV3_K4lk0ln5'
+const WHATSAPP_LINK = 'https://wa.me/919311729700'
+
 const serviceIcons = [
   { icon: '💍', label: 'Wedding\nCatering' },
   { icon: '🏢', label: 'Corporate\nCatering' },
@@ -29,7 +32,14 @@ export default function Hero() {
           <div className="hero-btns">
             <button className="btn-primary">Get Free Quote</button>
             <button className="btn-outline-white">Book Catering</button>
-            <button className="btn-outline-white">Explore Menu</button>
+            <a
+              href={MENU_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline-white"
+            >
+              Explore Menu
+            </a>
           </div>
           <div className="hero-services">
             {serviceIcons.map(s => (
@@ -50,50 +60,22 @@ export default function Hero() {
         <div className="hero-qr">
 
           {/* Card 1 — Menu PDF */}
-          <div className="qr-card">
+          <a href={MENU_LINK} target="_blank" rel="noopener noreferrer" className="qr-card">
             <div className="qr-card-title">SCAN FOR<br />MENU PDF</div>
             <div className="qr-code-wrap">
-              <svg width="90" height="90" viewBox="0 0 56 56" fill="none">
-                <rect x="2" y="2" width="20" height="20" rx="2" stroke="#0d9488" strokeWidth="2"/>
-                <rect x="8" y="8" width="8" height="8" fill="#0d9488"/>
-                <rect x="34" y="2" width="20" height="20" rx="2" stroke="#0d9488" strokeWidth="2"/>
-                <rect x="40" y="8" width="8" height="8" fill="#0d9488"/>
-                <rect x="2" y="34" width="20" height="20" rx="2" stroke="#0d9488" strokeWidth="2"/>
-                <rect x="8" y="40" width="8" height="8" fill="#0d9488"/>
-                <rect x="34" y="34" width="5" height="5" fill="#0d9488"/>
-                <rect x="42" y="34" width="5" height="5" fill="#0d9488"/>
-                <rect x="34" y="42" width="5" height="5" fill="#0d9488"/>
-                <rect x="47" y="47" width="7" height="7" fill="#0d9488"/>
-                <rect x="23" y="23" width="3" height="3" fill="#0d9488"/>
-                <rect x="28" y="23" width="3" height="3" fill="#0d9488"/>
-                <rect x="23" y="28" width="3" height="3" fill="#0d9488"/>
-              </svg>
+              <img src="/qr-menu.png" alt="Scan for Menu PDF" width="90" height="90" />
             </div>
             <div className="qr-card-desc">Scan to view our complete menu</div>
-          </div>
+          </a>
 
           {/* Card 2 — WhatsApp */}
-          <div className="qr-card">
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="qr-card">
             <div className="qr-card-title">CHAT ON<br />WHATSAPP</div>
             <div className="qr-code-wrap">
-              <svg width="90" height="90" viewBox="0 0 56 56" fill="none">
-                <rect x="2" y="2" width="20" height="20" rx="2" stroke="#0d9488" strokeWidth="2"/>
-                <rect x="8" y="8" width="8" height="8" fill="#0d9488"/>
-                <rect x="34" y="2" width="20" height="20" rx="2" stroke="#0d9488" strokeWidth="2"/>
-                <rect x="40" y="8" width="8" height="8" fill="#0d9488"/>
-                <rect x="2" y="34" width="20" height="20" rx="2" stroke="#0d9488" strokeWidth="2"/>
-                <rect x="8" y="40" width="8" height="8" fill="#0d9488"/>
-                <rect x="34" y="34" width="5" height="5" fill="#0d9488"/>
-                <rect x="47" y="34" width="7" height="7" fill="#0d9488"/>
-                <rect x="34" y="47" width="7" height="7" fill="#0d9488"/>
-                <rect x="44" y="44" width="10" height="10" fill="#0d9488"/>
-                <rect x="23" y="23" width="3" height="3" fill="#0d9488"/>
-                <rect x="28" y="28" width="3" height="3" fill="#0d9488"/>
-                <rect x="23" y="33" width="3" height="3" fill="#0d9488"/>
-              </svg>
+              <img src="/qr-whatsapp.png" alt="Chat on WhatsApp" width="90" height="90" />
             </div>
             <div className="qr-card-desc">Scan to start a chat with us</div>
-          </div>
+          </a>
 
         </div>
 
