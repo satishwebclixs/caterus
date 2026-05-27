@@ -3,9 +3,6 @@ import './Gallery.css'
 
 const tabs = ['All', 'Weddings', 'Corporate Events', 'Live Counters', 'Birthday Celebrations', 'Premium Buffet Setup', 'Catering Services', 'Event Gallery']
 
-// Google Drive direct image URL
-const gd = id => `https://lh3.googleusercontent.com/d/${id}`
-
 const galleryImages = [
   // Weddings
   { src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&q=80', cat: 'Weddings' },
@@ -24,17 +21,17 @@ const galleryImages = [
   { src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80', cat: 'Premium Buffet Setup' },
   { src: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&q=80', cat: 'Premium Buffet Setup' },
   { src: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=400&q=80', cat: 'Premium Buffet Setup' },
-  // Catering Services — real photos from Google Drive
-  { src: gd('1vReMwi9_bGpBy0pNitR_sfCHTxtniYXA'), cat: 'Catering Services' },
-  { src: gd('1QB2VMMe49bnoMySeSaJB0n2AMlyQpk7f'), cat: 'Catering Services' },
-  { src: gd('1tAgZFO7Qj_DtlL-DQu6NEu-Vxq2d752G'), cat: 'Catering Services' },
-  { src: gd('1uwJkd_opVswQt6RG0TkxHAcCoYabEycW'), cat: 'Catering Services' },
-  // Event Gallery — real photos from Google Drive
-  { src: gd('1X7snSIbAOB89vfcE1byhkPIIeIimqoqF'), cat: 'Event Gallery' },
-  { src: gd('13l3kkY87UElqdUBidc81dpGLTqY1Q4Gq'), cat: 'Event Gallery' },
-  { src: gd('1arpP3HhUqUChvpbb5QKNDusovOVyaX4g'), cat: 'Event Gallery' },
-  { src: gd('1RcDCdoJ5n4v7iI_IHajYxARJn4HQyIhn'), cat: 'Event Gallery' },
-  { src: gd('1eYEuycqtOR3IiBusxZXfq8-eNm5xba63'), cat: 'Event Gallery' },
+  // Catering Services — real photos (cs2 is CR2 RAW, placeholder used)
+  { src: '/gallery/cs1.jpg', cat: 'Catering Services' },
+  { src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80', cat: 'Catering Services' },
+  { src: '/gallery/cs3.jpg', cat: 'Catering Services' },
+  { src: '/gallery/cs4.jpg', cat: 'Catering Services' },
+  // Event Gallery — real photos (eg1, eg3, eg5 are CR2 RAW, placeholders used)
+  { src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&q=80', cat: 'Event Gallery' },
+  { src: '/gallery/eg2.jpg', cat: 'Event Gallery' },
+  { src: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&q=80', cat: 'Event Gallery' },
+  { src: '/gallery/eg4.jpg', cat: 'Event Gallery' },
+  { src: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&q=80', cat: 'Event Gallery' },
 ]
 
 export default function Gallery() {
