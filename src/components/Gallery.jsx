@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Gallery.css'
 
-const tabs = ['All', 'Weddings', 'Corporate Events', 'Live Counters', 'Birthday Celebrations', 'Premium Buffet Setup', 'Catering Services', 'Event Gallery']
+const tabs = ['All', 'Weddings', 'Corporate Events', 'Live Counters', 'Birthday Celebrations', 'Premium Buffet Setup', 'Catering Services', 'Event Gallery', 'Menu']
 
 const galleryImages = [
   // Weddings
@@ -32,6 +32,19 @@ const galleryImages = [
   { src: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&q=80', cat: 'Event Gallery' },
   { src: '/gallery/eg4.jpg', cat: 'Event Gallery' },
   { src: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&q=80', cat: 'Event Gallery' },
+  // Menu — 12 real photos
+  { src: '/gallery/new1.jpg', cat: 'Menu' },
+  { src: '/gallery/new2.jpg', cat: 'Menu' },
+  { src: '/gallery/new4.jpg', cat: 'Menu' },
+  { src: '/gallery/new5.jpg', cat: 'Menu' },
+  { src: '/gallery/new6.jpg', cat: 'Menu' },
+  { src: '/gallery/new7.jpg', cat: 'Menu' },
+  { src: '/gallery/new8.jpg', cat: 'Menu' },
+  { src: '/gallery/new9.jpg', cat: 'Menu' },
+  { src: '/gallery/new10.jpg', cat: 'Menu' },
+  { src: '/gallery/new11.jpg', cat: 'Menu' },
+  { src: '/gallery/new12.jpg', cat: 'Menu' },
+  { src: '/gallery/new13.jpg', cat: 'Menu' },
 ]
 
 export default function Gallery() {
