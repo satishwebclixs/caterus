@@ -54,9 +54,6 @@ export default function Gallery() {
           ))}
         </div>
 
-        <div className="gallery-cta">
-          <button className="btn-primary">View More Gallery &rarr;</button>
-        </div>
       </div>
     </section>
   )

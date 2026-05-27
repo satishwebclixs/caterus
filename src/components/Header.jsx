@@ -4,7 +4,7 @@ import './Header.css'
 
 const navLinks = ['Home', 'Services', 'Events', 'Menu', 'Gallery', 'About Us', 'FAQ', 'Contact']
 
-export default function Header() {
+export default function Header({ onOpenModal }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -31,7 +31,7 @@ export default function Header() {
             <FiPhone size={15} />
             Call Now
           </a>
-          <a href="#contact" className="btn-primary">Get Quote</a>
+          <button className="btn-primary" onClick={onOpenModal}>Get Quote</button>
           <button className="hamburger" onClick={() => setMenuOpen(o => !o)}>
             {menuOpen ? <FiX size={22} /> : <FiMenu size={22} />}
           </button>

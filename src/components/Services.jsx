@@ -1,5 +1,7 @@
 import './Services.css'
 
+const MENU_LINK = 'https://drive.google.com/drive/folders/1B16fSR8fSrhfgIk0HWGlFV3_K4lk0ln5'
+
 const services = [
   {
     img: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&q=80',
@@ -43,9 +45,9 @@ export default function Services() {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
-                <button className="btn-outline service-btn">
+                <a href={MENU_LINK} target="_blank" rel="noopener noreferrer" className="btn-outline service-btn">
                   Explore More &rarr;
-                </button>
+                </a>
               </div>
             </div>
           ))}

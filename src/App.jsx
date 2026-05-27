@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -8,23 +9,29 @@ import Testimonials from './components/Testimonials'
 import Gallery from './components/Gallery'
 import CtaBanner from './components/CtaBanner'
 import Footer from './components/Footer'
+import InquiryModal from './components/InquiryModal'
 import './index.css'
 
 function App() {
+  const [modalOpen, setModalOpen] = useState(false)
+  const openModal  = () => setModalOpen(true)
+  const closeModal = () => setModalOpen(false)
+
   return (
     <>
-      <Header />
+      <Header onOpenModal={openModal} />
       <main>
-        <Hero />
+        <Hero onOpenModal={openModal} />
         <About />
         <Services />
         <MenuSection />
         <Stats />
         <Testimonials />
         <Gallery />
-        <CtaBanner />
+        <CtaBanner onOpenModal={openModal} />
       </main>
       <Footer />
+      <InquiryModal isOpen={modalOpen} onClose={closeModal} />
     </>
   )
 }

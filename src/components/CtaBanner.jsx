@@ -1,7 +1,7 @@
 import './CtaBanner.css'
 import { FiMessageCircle, FiPhone } from 'react-icons/fi'
 
-export default function CtaBanner() {
+export default function CtaBanner({ onOpenModal }) {
   return (
     <section className="cta-banner" id="contact">
       <div className="container cta-content">
@@ -11,7 +11,7 @@ export default function CtaBanner() {
           give your guests an unforgettable dining experience.
         </p>
         <div className="cta-btns">
-          <button className="btn-primary">Get Free Quote</button>
+          <button className="btn-primary" onClick={onOpenModal}>Get Free Quote</button>
           <a href="https://wa.me/919311729700" className="btn-whatsapp">
             <FiMessageCircle />
             WhatsApp Now

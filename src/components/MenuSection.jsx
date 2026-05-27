@@ -1,5 +1,7 @@
 import './MenuSection.css'
 
+const MENU_LINK = 'https://drive.google.com/drive/folders/1B16fSR8fSrhfgIk0HWGlFV3_K4lk0ln5'
+
 const menuItems = [
   { label: 'Indian', img: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=150&q=80' },
   { label: 'Continental', img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=150&q=80' },
@@ -35,7 +37,7 @@ export default function MenuSection() {
         </div>
 
         <div className="menu-cta">
-          <button className="btn-primary">View Full Catering Menu &rarr;</button>
+          <a href={MENU_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary">View Full Catering Menu &rarr;</a>
         </div>
       </div>
     </section>

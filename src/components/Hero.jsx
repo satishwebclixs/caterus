@@ -12,7 +12,7 @@ const serviceIcons = [
   { icon: '📋', label: 'Customized\nMenus' },
 ]
 
-export default function Hero() {
+export default function Hero({ onOpenModal }) {
   return (
     <section className="hero" id="home">
       <div className="hero-overlay" />
@@ -30,8 +30,8 @@ export default function Hero() {
             live food experiences.
           </p>
           <div className="hero-btns">
-            <button className="btn-primary">Get Free Quote</button>
-            <button className="btn-outline-white">Book Catering</button>
+            <button className="btn-primary" onClick={onOpenModal}>Get Free Quote</button>
+            <button className="btn-outline-white" onClick={onOpenModal}>Book Catering</button>
             <a
               href={MENU_LINK}
               target="_blank"
