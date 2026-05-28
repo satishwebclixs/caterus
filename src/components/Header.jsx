@@ -1,8 +1,18 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { FiPhone, FiMenu, FiX } from 'react-icons/fi'
 import './Header.css'
 
-const navLinks = ['Home', 'Services', 'Events', 'Menu', 'Gallery', 'About Us', 'FAQ', 'Contact']
+const navLinks = [
+  { label: 'Home',     href: '/' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Events',   href: '/#events' },
+  { label: 'Menu',     href: '/#menu' },
+  { label: 'Gallery',  href: '/#gallery' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'FAQ',      href: '/faq' },
+  { label: 'Contact',  href: '/#contact' },
+]
 
 export default function Header({ onOpenModal }) {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -10,19 +20,19 @@ export default function Header({ onOpenModal }) {
   return (
     <header className="header">
       <div className="header-inner container">
-        <a href="#" className="logo">
+        <Link to="/" className="logo">
           <span className="logo-icon">🍽️</span>
           <div>
             <div className="logo-name">CaterUs</div>
             <div className="logo-tagline">EXCEPTIONAL TASTE, FLAWLESS SERVICE</div>
           </div>
-        </a>
+        </Link>
 
         <nav className={`nav ${menuOpen ? 'nav-open' : ''}`}>
           {navLinks.map(link => (
-            <a key={link} href={`#${link.toLowerCase().replace(' ', '-')}`} className="nav-link">
-              {link}
-            </a>
+            link.href.startsWith('/faq')
+              ? <Link key={link.label} to={link.href} className="nav-link" onClick={() => setMenuOpen(false)}>{link.label}</Link>
+              : <a key={link.label} href={link.href} className="nav-link" onClick={() => setMenuOpen(false)}>{link.label}</a>
           ))}
         </nav>
 
