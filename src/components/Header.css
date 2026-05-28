@@ -22,22 +22,10 @@
   flex-shrink: 0;
 }
 
-.logo-icon { font-size: 28px; }
-
-.logo-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: #111827;
-  line-height: 1;
-}
-
-.logo-tagline {
-  font-size: 7.5px;
-  letter-spacing: 1.5px;
-  color: #6b7280;
-  text-transform: uppercase;
-  margin-top: 2px;
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
 }
 
 .nav {
@@ -135,8 +123,6 @@
 }
 
 @media (max-width: 480px) {
-  .logo-tagline { display: none; }
-  .logo-name { font-size: 18px; }
-  .logo-icon { font-size: 22px; }
+  .logo-img { height: 34px; }
   .btn-call { padding: 7px 10px; }
 }

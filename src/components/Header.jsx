@@ -22,11 +22,7 @@ export default function Header({ onOpenModal }) {
     <header className="header">
       <div className="header-inner container">
         <Link to="/" className="logo">
-          <span className="logo-icon">🍽️</span>
-          <div>
-            <div className="logo-name">CaterUs</div>
-            <div className="logo-tagline">EXCEPTIONAL TASTE, FLAWLESS SERVICE</div>
-          </div>
+          <img src="/logo.png" alt="CaterUs by Honey & Dough" className="logo-img" />
         </Link>
 
         <nav className={`nav ${menuOpen ? 'nav-open' : ''}`}>
