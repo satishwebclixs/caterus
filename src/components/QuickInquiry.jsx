@@ -1,15 +1,8 @@
-import { useState, useRef } from 'react'
-import emailjs from '@emailjs/browser'
+import { useState } from 'react'
 import { FiUser, FiPhone, FiCalendar, FiUsers, FiChevronDown } from 'react-icons/fi'
 import './QuickInquiry.css'
 
-// EmailJS config — set these in .env file (copy .env.example → .env)
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_caterus'
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_inquiry'
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
-
 export default function QuickInquiry() {
-  const formRef = useRef(null)
   const [form, setForm] = useState({
     name: '', phone: '', eventType: '', guests: '', eventDate: ''
   })
@@ -25,23 +18,18 @@ export default function QuickInquiry() {
 
     setStatus('sending')
 
-    const templateParams = {
-      to_email: 'satish.webclixs@gmail.com',
-      from_name: form.name,
-      phone: form.phone,
-      event_type: form.eventType,
-      guests: form.guests || 'Not specified',
-      event_date: form.eventDate || 'Not specified',
-      message: `New catering inquiry from ${form.name}\n\nPhone: ${form.phone}\nEvent Type: ${form.eventType}\nGuest Count: ${form.guests || 'Not specified'}\nEvent Date: ${form.eventDate || 'Not specified'}`,
-    }
-
     try {
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
+      const res = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (!res.ok) throw new Error('Failed')
       setStatus('success')
       setForm({ name: '', phone: '', eventType: '', guests: '', eventDate: '' })
       setTimeout(() => setStatus('idle'), 5000)
     } catch (err) {
-      console.error('EmailJS error:', err)
+      console.error('Send error:', err)
       setStatus('error')
       setTimeout(() => setStatus('idle'), 4000)
     }
