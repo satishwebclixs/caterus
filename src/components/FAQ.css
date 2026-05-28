@@ -1,3 +1,31 @@
+/* FAQ Page Hero */
+.faq-page-hero {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  padding: 80px 20px 60px;
+  text-align: center;
+  color: #fff;
+}
+
+.faq-page-hero .section-tag {
+  color: #99f6e4;
+  margin-bottom: 12px;
+}
+
+.faq-page-hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+.faq-page-hero p {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* FAQ Section */
 .faq {
   padding: 80px 0;
   background: #f8fafc;

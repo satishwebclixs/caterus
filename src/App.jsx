@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -8,10 +9,25 @@ import Stats from './components/Stats'
 import Testimonials from './components/Testimonials'
 import Gallery from './components/Gallery'
 import CtaBanner from './components/CtaBanner'
-import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import InquiryModal from './components/InquiryModal'
+import FAQPage from './pages/FAQPage'
 import './index.css'
+
+function HomePage({ onOpenModal }) {
+  return (
+    <>
+      <Hero onOpenModal={onOpenModal} />
+      <About />
+      <Services />
+      <MenuSection />
+      <Stats />
+      <Testimonials />
+      <Gallery />
+      <CtaBanner onOpenModal={onOpenModal} />
+    </>
+  )
+}
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false)
@@ -19,22 +35,17 @@ function App() {
   const closeModal = () => setModalOpen(false)
 
   return (
-    <>
+    <BrowserRouter>
       <Header onOpenModal={openModal} />
       <main>
-        <Hero onOpenModal={openModal} />
-        <About />
-        <Services />
-        <MenuSection />
-        <Stats />
-        <Testimonials />
-        <Gallery />
-        <FAQ />
-        <CtaBanner onOpenModal={openModal} />
+        <Routes>
+          <Route path="/" element={<HomePage onOpenModal={openModal} />} />
+          <Route path="/faq" element={<FAQPage />} />
+        </Routes>
       </main>
       <Footer />
       <InquiryModal isOpen={modalOpen} onClose={closeModal} />
-    </>
+    </BrowserRouter>
   )
 }
 
