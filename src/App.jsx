@@ -8,6 +8,7 @@ import Stats from './components/Stats'
 import Testimonials from './components/Testimonials'
 import Gallery from './components/Gallery'
 import CtaBanner from './components/CtaBanner'
+import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import InquiryModal from './components/InquiryModal'
 import './index.css'
@@ -28,6 +29,7 @@ function App() {
         <Stats />
         <Testimonials />
         <Gallery />
+        <FAQ />
         <CtaBanner onOpenModal={openModal} />
       </main>
       <Footer />
