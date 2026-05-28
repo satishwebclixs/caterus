@@ -31,7 +31,7 @@ export default function Hero({ onOpenModal }) {
           </p>
           <div className="hero-btns">
             <button className="btn-primary" onClick={onOpenModal}>Get Free Quote</button>
-            <button className="btn-outline-white" onClick={onOpenModal}>Book Catering</button>
+            <a href="tel:+919311729700" className="btn-outline-white">Book Catering</a>
             <a
               href={MENU_LINK}
               target="_blank"
