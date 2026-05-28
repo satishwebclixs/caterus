@@ -8,10 +8,10 @@ import MenuSection from './components/MenuSection'
 import Stats from './components/Stats'
 import Testimonials from './components/Testimonials'
 import Gallery from './components/Gallery'
+import FAQ from './components/FAQ'
 import CtaBanner from './components/CtaBanner'
 import Footer from './components/Footer'
 import InquiryModal from './components/InquiryModal'
-import FAQPage from './pages/FAQPage'
 import './index.css'
 
 function HomePage({ onOpenModal }) {
@@ -24,6 +24,7 @@ function HomePage({ onOpenModal }) {
       <Stats />
       <Testimonials />
       <Gallery />
+      <FAQ />
       <CtaBanner onOpenModal={onOpenModal} />
     </>
   )
@@ -40,7 +41,6 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage onOpenModal={openModal} />} />
-          <Route path="/faq" element={<FAQPage />} />
         </Routes>
       </main>
       <Footer />

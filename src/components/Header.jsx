@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FiPhone, FiMenu, FiX } from 'react-icons/fi'
+// Link kept for logo only
 import './Header.css'
 
 const navLinks = [
@@ -10,7 +11,7 @@ const navLinks = [
   { label: 'Menu',     href: '/#menu' },
   { label: 'Gallery',  href: '/#gallery' },
   { label: 'About Us', href: '/#about' },
-  { label: 'FAQ',      href: '/faq' },
+  { label: 'FAQ',      href: '/#faq' },
   { label: 'Contact',  href: '/#contact' },
 ]
 
@@ -30,9 +31,7 @@ export default function Header({ onOpenModal }) {
 
         <nav className={`nav ${menuOpen ? 'nav-open' : ''}`}>
           {navLinks.map(link => (
-            link.href.startsWith('/faq')
-              ? <Link key={link.label} to={link.href} className="nav-link" onClick={() => setMenuOpen(false)}>{link.label}</Link>
-              : <a key={link.label} href={link.href} className="nav-link" onClick={() => setMenuOpen(false)}>{link.label}</a>
+            <a key={link.label} href={link.href} className="nav-link" onClick={() => setMenuOpen(false)}>{link.label}</a>
           ))}
         </nav>
 

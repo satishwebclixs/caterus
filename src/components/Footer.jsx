@@ -1,6 +1,5 @@
 import './Footer.css'
 import { FiPhone, FiMail, FiMapPin, FiInstagram, FiFacebook, FiYoutube } from 'react-icons/fi'
-import { Link } from 'react-router-dom'
 
 const quickLinks = [
   { label: 'Home',       href: '/' },
@@ -8,7 +7,7 @@ const quickLinks = [
   { label: 'Menu',       href: '/#menu' },
   { label: 'Gallery',    href: '/#gallery' },
   { label: 'About Us',   href: '/#about' },
-  { label: 'FAQ',        href: '/faq' },
+  { label: 'FAQ',        href: '/#faq' },
   { label: 'Contact Us', href: '/#contact-us' },
 ]
 
@@ -34,10 +33,7 @@ export default function Footer() {
           <ul>
             {quickLinks.map(l => (
               <li key={l.label}>
-                {l.href.startsWith('/faq')
-                  ? <Link to={l.href}>{l.label}</Link>
-                  : <a href={l.href}>{l.label}</a>
-                }
+                <a href={l.href}>{l.label}</a>
               </li>
             ))}
           </ul>
