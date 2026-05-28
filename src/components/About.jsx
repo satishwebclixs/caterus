@@ -12,10 +12,9 @@ export default function About() {
           <span className="teal">Deliciously Memorable</span>
         </h2>
         <p className="about-desc">
-          At CaterUs, we specialize in premium catering experiences crafted for grand celebrations,
-          formal corporate gatherings, and intimate special occasions. From elegant wedding feasts to
-          professional corporate dining and live catering counters, we bring exceptional taste,
-          presentation, and hospitality to every event.
+          At CaterUs, we specialize in premium catering experiences for grand celebrations,
+          corporate gatherings, and special occasions. From elegant wedding feasts to live catering
+          counters, we deliver exceptional taste, presentation, and hospitality to every event.
         </p>
       </div>
     </section>
