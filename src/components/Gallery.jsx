@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Gallery.css'
 
-const tabs = ['All', 'Weddings', 'Corporate Events', 'Live Counters', 'Birthday Celebrations', 'Premium Buffet Setup', 'Catering Services', 'Event Gallery']
+const tabs = ['All', 'Weddings', 'Corporate Events', 'Birthday Celebrations', 'Premium Buffet Setup', 'Catering Services', 'Event Gallery']
 
 const galleryImages = [
   // Weddings
@@ -11,9 +11,6 @@ const galleryImages = [
   // Corporate Events
   { src: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&q=80', cat: 'Corporate Events' },
   { src: 'https://images.unsplash.com/photo-1454944338482-a69bb95894af?w=400&q=80', cat: 'Corporate Events' },
-  // Live Counters
-  { src: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&q=80', cat: 'Live Counters' },
-  { src: 'https://images.unsplash.com/photo-1581349437898-cebbe9831942?w=400&q=80', cat: 'Live Counters' },
   // Birthday Celebrations
   { src: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&q=80', cat: 'Birthday Celebrations' },
   { src: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&q=80', cat: 'Birthday Celebrations' },
