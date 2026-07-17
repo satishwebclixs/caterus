@@ -26,8 +26,7 @@ export default function QuickInquiry() {
       })
       if (!res.ok) throw new Error('Failed')
       setStatus('success')
-      setForm({ name: '', phone: '', eventType: '', guests: '', eventDate: '' })
-      setTimeout(() => setStatus('idle'), 5000)
+      window.location.assign('/thank-you')
     } catch (err) {
       console.error('Send error:', err)
       setStatus('error')

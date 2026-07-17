@@ -11,6 +11,7 @@ import FAQ from './components/FAQ'
 import CtaBanner from './components/CtaBanner'
 import Footer from './components/Footer'
 const InquiryModal = lazy(() => import('./components/InquiryModal'))
+const ThankYouPage = lazy(() => import('./pages/ThankYouPage'))
 
 function HomePage({ onOpenModal }) {
   return (
@@ -32,6 +33,15 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false)
   const openModal  = () => setModalOpen(true)
   const closeModal = () => setModalOpen(false)
+  const isThankYouPage = window.location.pathname.replace(/\/+$/, '') === '/thank-you'
+
+  if (isThankYouPage) {
+    return (
+      <Suspense fallback={null}>
+        <ThankYouPage />
+      </Suspense>
+    )
+  }
 
   return (
     <>
