@@ -4,22 +4,22 @@ const MENU_LINK = 'https://drive.google.com/drive/folders/1B16fSR8fSrhfgIk0HWGlF
 
 const services = [
   {
-    img: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&q=80',
+    img: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=400&h=240&q=75',
     title: 'BIG EVENT CATERING',
     items: ['Wedding Catering', 'Engagement Catering', 'Roka Ceremony Catering', 'Reception Catering', 'Sangeet & Mehendi Catering'],
   },
   {
-    img: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=400&q=80',
+    img: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=400&h=240&q=75',
     title: 'FORMAL EVENT CATERING',
     items: ['Corporate Catering', 'Office Catering', 'School Catering', 'College Event Catering', 'Exhibition Catering', 'Trade Show Catering', 'Conference Catering'],
   },
   {
-    img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&q=80',
+    img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=400&h=240&q=75',
     title: 'SPECIAL EVENT CATERING',
     items: ['Birthday Parties', 'Anniversary Celebrations', 'Kitty Parties', 'House Parties', 'Family Gatherings'],
   },
   {
-    img: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=400&q=80',
+    img: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=400&h=240&q=75',
     title: 'LIVE CATERING EXPERIENCE',
     items: ['Live Pasta Counters', 'Chaat Stations', 'BBQ Counters', 'Mocktail Bars', 'Dessert Live Counters'],
   },
@@ -35,7 +35,14 @@ export default function Services() {
           {services.map(s => (
             <div key={s.title} className="service-card">
               <div className="service-img-wrap">
-                <img src={s.img} alt={s.title} />
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  width="400"
+                  height="240"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div className="service-img-overlay" />
               </div>
               <div className="service-body">

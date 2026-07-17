@@ -46,7 +46,7 @@ export default function QuickInquiry() {
           <p>Thank you! Your inquiry has been sent successfully. We will contact you shortly.</p>
         </div>
       ) : (
-        <form ref={formRef} onSubmit={handleSubmit} className="inquiry-form">
+        <form onSubmit={handleSubmit} className="inquiry-form">
           <div className="inq-field">
             <FiUser className="inq-icon" />
             <input

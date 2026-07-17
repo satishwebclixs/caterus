@@ -4,11 +4,15 @@
   overflow: hidden;
   text-align: center;
 
-  /* uploaded image as full background — no overlay */
-  background-image: url('/pp3.webp');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+}
+
+.cta-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .cta-content {

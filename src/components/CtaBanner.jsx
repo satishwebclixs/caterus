@@ -4,6 +4,16 @@ import { FiMessageCircle, FiPhone } from 'react-icons/fi'
 export default function CtaBanner({ onOpenModal }) {
   return (
     <section className="cta-banner" id="contact">
+      <img
+        className="cta-bg"
+        src="/pp3.webp"
+        alt=""
+        width="1672"
+        height="941"
+        loading="lazy"
+        decoding="async"
+        aria-hidden="true"
+      />
       <div className="container cta-content">
         <h2>Let&apos;s Make Your Event Extraordinary</h2>
         <p>

@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { FiPhone, FiMenu, FiX } from 'react-icons/fi'
-// Link kept for logo only
 import './Header.css'
 
 const navLinks = [
@@ -21,9 +19,16 @@ export default function Header({ onOpenModal }) {
   return (
     <header className="header">
       <div className="header-inner container">
-        <Link to="/" className="logo">
-          <img src="/logo.png" alt="CaterUs by Honey & Dough" className="logo-img" />
-        </Link>
+        <a href="/" className="logo">
+          <img
+            src="/logo.png"
+            alt="CaterUs by Honey & Dough"
+            className="logo-img"
+            width="475"
+            height="119"
+            decoding="async"
+          />
+        </a>
 
         <nav className={`nav ${menuOpen ? 'nav-open' : ''}`}>
           {navLinks.map(link => (

@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import Lightbox from './Lightbox'
+import { lazy, Suspense, useState } from 'react'
 import './Gallery.css'
+
+const Lightbox = lazy(() => import('./Lightbox'))
 
 const galleryImages = [
   { src: '/gallery/cs1.jpg', alt: 'Catering Services' },
@@ -38,7 +39,14 @@ export default function Gallery() {
               onClick={() => openLightbox(i)}
               style={{ cursor: 'pointer' }}
             >
-              <img src={img.src} alt={img.alt} />
+              <img
+                src={img.src}
+                alt={img.alt}
+                width="900"
+                height="675"
+                loading="lazy"
+                decoding="async"
+              />
               <div className="gallery-overlay">
                 <span>{img.alt}</span>
               </div>
@@ -48,13 +56,15 @@ export default function Gallery() {
       </div>
 
       {lightboxIndex !== null && (
-        <Lightbox
-          images={galleryImages}
-          index={lightboxIndex}
-          onClose={closeLightbox}
-          onPrev={prevImage}
-          onNext={nextImage}
-        />
+        <Suspense fallback={null}>
+          <Lightbox
+            images={galleryImages}
+            index={lightboxIndex}
+            onClose={closeLightbox}
+            onPrev={prevImage}
+            onNext={nextImage}
+          />
+        </Suspense>
       )}
     </section>
   )

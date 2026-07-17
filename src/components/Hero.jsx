@@ -63,7 +63,7 @@ export default function Hero({ onOpenModal }) {
           <a href={MENU_LINK} target="_blank" rel="noopener noreferrer" className="qr-card">
             <div className="qr-card-title">SCAN FOR<br />MENU PDF</div>
             <div className="qr-code-wrap">
-              <img src="/menu.jpeg" alt="Scan for Menu PDF" width="90" height="90" />
+              <img src="/menu-qr.png" alt="Scan for Menu PDF" width="90" height="90" decoding="async" />
             </div>
             <div className="qr-card-desc">Scan to view our complete menu</div>
           </a>
@@ -72,7 +72,7 @@ export default function Hero({ onOpenModal }) {
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="qr-card">
             <div className="qr-card-title">CHAT ON<br />WHATSAPP</div>
             <div className="qr-code-wrap">
-              <img src="/chat on whatsapp.jpeg" alt="Chat on WhatsApp" width="90" height="90" />
+              <img src="/chat on whatsapp.jpeg" alt="Chat on WhatsApp" width="90" height="90" decoding="async" />
             </div>
             <div className="qr-card-desc">Scan to start a chat with us</div>
           </a>

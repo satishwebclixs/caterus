@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { lazy, Suspense, useState } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -11,8 +10,7 @@ import Gallery from './components/Gallery'
 import FAQ from './components/FAQ'
 import CtaBanner from './components/CtaBanner'
 import Footer from './components/Footer'
-import InquiryModal from './components/InquiryModal'
-import './index.css'
+const InquiryModal = lazy(() => import('./components/InquiryModal'))
 
 function HomePage({ onOpenModal }) {
   return (
@@ -36,16 +34,18 @@ function App() {
   const closeModal = () => setModalOpen(false)
 
   return (
-    <BrowserRouter>
+    <>
       <Header onOpenModal={openModal} />
       <main>
-        <Routes>
-          <Route path="/" element={<HomePage onOpenModal={openModal} />} />
-        </Routes>
+        <HomePage onOpenModal={openModal} />
       </main>
       <Footer />
-      <InquiryModal isOpen={modalOpen} onClose={closeModal} />
-    </BrowserRouter>
+      {modalOpen && (
+        <Suspense fallback={null}>
+          <InquiryModal isOpen onClose={closeModal} />
+        </Suspense>
+      )}
+    </>
   )
 }
 

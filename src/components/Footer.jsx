@@ -17,7 +17,15 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <div className="footer-logo">
-            <img src="/logo.png" alt="CaterUs by Honey & Dough" className="footer-logo-img" />
+            <img
+              src="/logo.png"
+              alt="CaterUs by Honey & Dough"
+              className="footer-logo-img"
+              width="475"
+              height="119"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <p className="footer-brand-desc">
             Crafting unforgettable culinary experiences for every occasion with passion and premium quality.
