@@ -14,9 +14,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    await resend.emails.send({
-      from: 'CaterUs Inquiry <onboarding@resend.dev>',
-      to: ['satish.webclixs@gmail.com'],
+    const { data, error } = await resend.emails.send({
+      from: 'CaterUs Inquiry <caterus@honeyanddough.in>',
+      to: ['caterus@honeyanddough.in'],
       subject: `New Catering Inquiry from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -62,7 +62,12 @@ export default async function handler(req, res) {
       `,
     })
 
-    return res.status(200).json({ success: true })
+    if (error || !data?.id) {
+      console.error('Resend send error:', error || 'Missing email ID')
+      return res.status(502).json({ error: 'Failed to send email' })
+    }
+
+    return res.status(200).json({ success: true, emailId: data.id })
   } catch (error) {
     console.error('Resend error:', error)
     return res.status(500).json({ error: 'Failed to send email' })
