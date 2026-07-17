@@ -57,7 +57,7 @@ export default function Footer() {
           <ul className="footer-contact">
             <li>
               <FiMapPin />
-              <span>123, Culinary Street, Gurugram, Haryana 122001</span>
+              <span>Lot No. 167, Basement Floor, Patparganj Industrial Area, Delhi 110092</span>
             </li>
             <li>
               <FiPhone />
@@ -65,7 +65,7 @@ export default function Footer() {
             </li>
             <li>
               <FiMail />
-              <a href="mailto:Caterus@honeyanddough.in">Caterus@honeyanddough.in</a>
+              <a href="mailto:caterus@honeyanddough.in">caterus@honeyanddough.in</a>
             </li>
           </ul>
         </div>
@@ -84,7 +84,10 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <div className="container">
-          <p>© {new Date().getFullYear()} CaterUs. All rights reserved. | Crafted with ❤️ for every celebration.</p>
+          <p>
+            © {new Date().getFullYear()} CaterUs | All rights reserved | Designed by{' '}
+            <a href="https://webclixs.com/" target="_blank" rel="noopener noreferrer">WebClixs</a>
+          </p>
         </div>
       </div>
     </footer>

@@ -118,6 +118,13 @@
   color: #6b7280;
 }
 
+.footer-bottom a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover { color: #14b8a6; }
+
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }

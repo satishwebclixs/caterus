@@ -8,7 +8,7 @@ const navLinks = [
   { label: 'Events',   href: '/#events' },
   { label: 'Menu',     href: '/#menu' },
   { label: 'Gallery',  href: '/#gallery' },
-  { label: 'About Us', href: '/#about' },
+  { label: 'About Us', href: '/#about-us' },
   { label: 'FAQ',      href: '/#faq' },
   { label: 'Contact',  href: '/#contact' },
 ]
